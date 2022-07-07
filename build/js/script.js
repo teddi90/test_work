@@ -4193,7 +4193,24 @@ var humbeurger = document.querySelector('.humbeurger');
 humbeurger.addEventListener('click', function () {
   return humbeurger.classList.toggle('humbeurger-active');
 });
+/*=========== Accardion ===========*/
+
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 /*=========== Swipe slider  ===========*/
+
 
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 24,

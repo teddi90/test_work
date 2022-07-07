@@ -1,4 +1,17 @@
 .header {
+   padding: 261px 180px;
+   position: relative;
+//    overflow: hidden;
+    background-image: url(../images/header_cart.svg), url(../images/header-wave.svg), url(../images/blue_ball.svg);
+    background-position: right center, left 90%, 12% 24%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.nav-fixed{
+    position: fixed;
+    box-shadow: 0 0px 8px rgba(#000,.1);
+    top: 0;
+}
+.nav {
     position: absolute;
     z-index: 999;
     background-color: $main-color;
@@ -15,16 +28,11 @@
     @include media('sm') {
         padding: 12px 0;
     }
-}
-.header-fixed{
-    position: fixed;
-    box-shadow: 0 0px 8px rgba(#000,.1);
-    top: 0;
-}
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .logo {
@@ -119,7 +127,8 @@
     }
 }
 .btn-nav{
-    padding: 7px 43px;
+    height: 38px;
+    width: 170px;
     &:hover{
         border-color:#fff;
     }
@@ -175,21 +184,33 @@
 }
 
 .humbeurger-active {
-        &~.menu-wrapper {
-            transform: translateY(0);
-        }
-
-        .humbeurger__item {
-            background-color: transparent;
-        }
-
-        .humbeurger__item::before {
-            transform: translateY(-7px) rotate(45deg);
-            transform-origin: center;
-        }
-
-        .humbeurger__item::after {
-            transform: translateY(7px) rotate(-45deg);
-            transform-origin: center;
-        }
+    &~.menu-wrapper {
+        transform: translateY(0);
     }
+
+    .humbeurger__item {
+        background-color: transparent;
+    }
+
+    .humbeurger__item::before {
+        transform: translateY(-7px) rotate(45deg);
+        transform-origin: center;
+    }
+
+    .humbeurger__item::after {
+        transform: translateY(7px) rotate(-45deg);
+        transform-origin: center;
+    }
+}
+.header-title{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.25;
+}
+.header-text{
+    font-size: 16px;
+    margin-bottom: 58px;
+    @include min-media('md') {
+        max-width: 382px;
+    }
+}

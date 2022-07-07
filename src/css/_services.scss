@@ -1,0 +1,83 @@
+.services {
+    padding: 120px 0;
+    background-color: $main-light-color;
+    background-image:url('../images/bag.svg');
+    background-repeat:no-repeat;
+    background-position: 95% 80%;
+}
+
+.accordion {
+    background-color: #fff;
+    border-radius:15px;
+    cursor: pointer;
+    padding: 14px 16px 15px 96px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-color: $primery-color;
+        display: block;
+        border-radius:50%;
+        left: 44px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color .4s ease-in-out;
+    }  
+    &::after {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        display: block;
+        right: 42px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform .2s ease-in-out;
+    }
+    &-item{
+        margin-bottom: 10px;
+    }
+}
+.active{
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}
+.active::before{
+    background-color: $main-color;
+}
+.active::after{
+    transform: rotate(225deg);
+}
+.active +.panel{
+    padding-bottom: 35px;
+}
+  
+.panel {
+    
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-sizing:border-box;
+   
+    p{
+        padding: 15px 69px 15px 96px;
+        position: relative;
+        &::before{
+            content:'';
+            display: block;
+            width: 2px;
+            height: 100%;
+            background-color: $text-color;
+            position: absolute;
+            left:56px;
+            top:0px
+        }
+    }
+}

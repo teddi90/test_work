@@ -109,10 +109,13 @@ ul {
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
     background-color: $primery-color;
     color: #fff;
-    padding: 12px 16px;
+    height: 60px;
+    width: 270px;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     font-size: 15px;
     border:2px solid $primery-color;
@@ -129,13 +132,12 @@ ul {
 
 
 .title {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 50px;
-    color: #000;
-    font-weight: normal;
+    color: #111;
     margin-top: 0;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 800;
     text-align: center;
     @include min-media(md){
         font-size: 26px;
