@@ -1,0 +1,52 @@
+.footer{
+    background-color: $main-color;
+    padding: 101px 0 79px;
+    &__logo{
+        display: inline-block;
+        margin-bottom: 45px;
+    }
+    &__email{
+        margin-top: 20px;
+        display: inline-block;
+        font-size: 20px;
+        color:#fff;
+    }
+    &__rights{
+        text-align: center;
+        color:#fff;
+    }
+    a:hover{
+        color:$main-light-color;
+        text-decoration: underline;
+    }
+}
+.social{
+    display: flex;
+    margin-bottom: 120px;
+    li{
+        &:not(:last-child){
+            margin-right: 38px;
+        }
+    }
+    &-link{
+        transition: transform .4s ease-in-out;
+        display: block;
+        &:hover{
+            transform:scale(1.12);
+        }
+        
+    }
+}
+.contact{
+    margin-top: 20px;
+    &-link{
+        text-transform: capitalize;
+        display: flex;
+        margin-bottom: 7px;
+        font-size: 20px;
+        color:#fff;
+        img{
+            margin-right: 9px;
+        }
+    }
+}

@@ -1,14 +1,3 @@
-/*=========== Header scroll style ===========*/
-function scrollHeader() {
-    const header = document.getElementById('header');
-    if (this.scrollY >= 50) {
-        header.classList.add('scroll-header');
-    } else if (this.scrollY < 50 && header.classList.contains('scroll-header')) {
-        header.classList.remove('scroll-header');
-
-    }
-}
-window.addEventListener('scroll', scrollHeader);
 
 /*=========== Humbeurger ===========*/
 const humbeurger = document.querySelector('.humbeurger');
@@ -19,7 +8,7 @@ const acc = document.getElementsByClassName("accordion");
 for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
-        const panel = this.nextElementSibling;
+        const panel = this.firstElementChild;
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
@@ -30,23 +19,13 @@ for (let i = 0; i < acc.length; i++) {
 
 /*=========== Swipe slider  ===========*/
 const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 24,
-    loop: true,
+    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 30,
     grabCursor: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-        },
-
     },
 });
 

@@ -12,6 +12,7 @@
     cursor: pointer;
     padding: 14px 16px 15px 96px;
     position: relative;
+    transition: all .4s ease-in-out;
     &::before {
         content: '';
         position: absolute;
@@ -21,8 +22,8 @@
         display: block;
         border-radius:50%;
         left: 44px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 15px;
+        // transform: translateY(-50%);
         transition: background-color .4s ease-in-out;
     }  
     &::after {
@@ -34,40 +35,36 @@
         border-bottom: 2px solid #000;
         display: block;
         right: 42px;
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-        transition: transform .2s ease-in-out;
+        top: 15px;
+        transform: rotate(45deg);
+        transition: all .2s ease-in-out;
     }
     &-item{
         margin-bottom: 10px;
     }
-}
-.active{
-    border-bottom-left-radius:0;
-    border-bottom-right-radius:0;
+}.active{
+    padding-bottom: 40px;
 }
 .active::before{
     background-color: $main-color;
 }
 .active::after{
     transform: rotate(225deg);
+    top:22px;
 }
-.active +.panel{
+.active .panel{
     padding-bottom: 35px;
+    overflow: visible !important;
 }
   
 .panel {
-    
-    background-color: white;
     max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    transition: all 0.2s ease-out;
     box-sizing:border-box;
+    overflow: hidden;
    
     p{
-        padding: 15px 69px 15px 96px;
+        padding: 15px 69px 15px 0px;
         position: relative;
         &::before{
             content:'';
@@ -76,7 +73,7 @@
             height: 100%;
             background-color: $text-color;
             position: absolute;
-            left:56px;
+            left:-42px;
             top:0px
         }
     }

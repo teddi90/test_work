@@ -6,13 +6,8 @@
     background-position: right center, left 90%, 12% 24%;
     background-repeat: no-repeat, no-repeat, no-repeat;
 }
-.nav-fixed{
-    position: fixed;
-    box-shadow: 0 0px 8px rgba(#000,.1);
-    top: 0;
-}
 .nav {
-    position: absolute;
+    position: fixed;
     z-index: 999;
     background-color: $main-color;
     padding: 18px 0;

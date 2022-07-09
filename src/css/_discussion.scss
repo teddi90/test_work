@@ -1,0 +1,38 @@
+.discussion {
+    background-color: $main-light-color;
+    padding: 180px 0 128px;
+    background-image: url(../images/phone.svg), url(../images/wave_ball.svg);
+    background-repeat:  no-repeat no-repeat;
+    background-position: 15% 60%, 85% 45%;
+}
+
+.discussion-form {
+    margin: 0 auto;
+    max-width: 470px;
+}
+.from {
+    text-align: center;
+    .btn {
+        display: inline-block;
+    }
+    input{
+        color:#939393;
+        width: 100%;
+        height: 58px;
+        border-radius:10px;
+        margin-bottom: 20px;
+        border: 1px solid $main-color;
+        padding:0 14px;
+        box-sizing:border-box;
+    }
+    .input-email {
+        margin-bottom: 30px;
+    }
+}
+.form-info {
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+
+
