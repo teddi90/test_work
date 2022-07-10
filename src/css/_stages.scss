@@ -3,20 +3,78 @@
 }
 .stages-slider{
     position: relative;
+    height: 535px;
+    h3{
+        margin-bottom: 29px;
+        width: 80%;
+    }
 }
 .swiper {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
+    overflow: visible;
     position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    &-wrapper{
+        margin-bottom: 80px;
+    }
   }
 .swiper-slide{
     border:2px solid $main-color;
     border-radius: 15px;
-    padding: 85px 30px 70px 70px;
-    width: 670px !important;
+    padding: 53px 17px 59px 50px;
+    height: 405px;
     box-sizing: border-box;
 }
 
-
- 
+.swiper-arrows{
+    text-align: center;
+}
+.swiper-arrow-next, .swiper-arrow-prev{
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    border-radius:15px;
+    height: 58px;
+    width: 58px;
+    border:2px solid $main-color;
+    cursor: pointer;
+    &:active{
+        background-color: $main-color;
+        &::after{
+            border-color:#fff;
+        }
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+    }
+}
+.swiper-arrow-prev{
+    margin-right: 30px;
+    &:after{
+        top: 32%;
+        left: 40%;
+        transform: rotate(135deg);
+    }
+}
+.swiper-arrow-next{
+    &:after{
+        top: 32%;
+        left: 22%;
+        transform: rotate(315deg);
+    }
+}
+.images-wrapper{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

@@ -10,10 +10,11 @@
     margin: 0 auto;
     max-width: 470px;
 }
-.from {
+.form {
     text-align: center;
     .btn {
         display: inline-block;
+        margin-top: 10px;
     }
     input{
         color:#939393;
@@ -25,14 +26,20 @@
         padding:0 14px;
         box-sizing:border-box;
     }
-    .input-email {
-        margin-bottom: 30px;
-    }
 }
 .form-info {
     text-align: center;
     margin-bottom: 27px;
 }
-
+.input-wrapper{
+    position: relative;
+}
+.input-warnnig{
+    position: absolute;
+    left: 10px;
+    bottom: 2px;
+    color: red;
+    font-size: 13px;
+}
 
 

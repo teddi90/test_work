@@ -18,6 +18,9 @@
                         <img src="./images/logo.svg" alt="logo" class="logo__img">
                     </a>
                 </div>
+                <div class="humbeurger">
+                    <span class="humbeurger__item"></span>
+                </div>
                 <div class="menu-wrapper">
                     <ul class="nav__menu menu">
                         <li class="menu__item"><a href="#services" class="menu__link">Услуги</a></li>
@@ -27,16 +30,14 @@
                         <li class="menu__item"><a href="#" class="btn btn-nav">Заказать</a></li>
                     </ul>
                 </div>
-                <div class="humbeurger">
-                    <span class="humbeurger__item"></span>
-                </div>
+               
             </div>
         </div>
     </nav>
     <header class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-xs-12 col-lg-6">
                         <h1 class="header-title">
                             Разработка интернет-магазина с нуля за неделю
                         </h1>
@@ -109,31 +110,73 @@
             <div class="stages-slider">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <h3>1. Анализ</h3>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p>Для того, чтобы онлайн-магазин приносил выгоду, перед его запуском необходимо провести анализ других предложений рынка, оценить конкурентов и найти наиболее удобное решение. </p>
-                            </div>
-                            <div class="col-lg-6">
-                                <img src="./images/slide1.png" alt="frame">
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <h3>2. Визуальное решение</h3>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p>Разработка дизайна ключевых страниц магазина – главная, каталог, информационные разделы, раздел корзины, товаров. Для нас главное – передать настроение бренда, сделать удобный для пользователя сайт. </p>
-                            </div>
-                            <div class="col-lg-6">
-                                <img src="./images/slide2.png" alt="frame">
+                        <div class="swiper-slide">
+                            
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h3>1. Анализ</h3>
+                                    <p>Для того, чтобы онлайн-магазин приносил выгоду, перед его запуском необходимо провести анализ других предложений рынка, оценить конкурентов и найти наиболее удобное решение. </p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="images-wrapper"><img src="./images/slide1.png" alt="frame"></div>
+                                </div>
                             </div>
                         </div>
-                      </div>
+                        <div class="swiper-slide">
+                            
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h3>2. Визуальное решение</h3>
+                                    <p>Разработка дизайна ключевых страниц магазина – главная, каталог, информационные разделы, раздел корзины, товаров. Для нас главное – передать настроение бренда, сделать удобный для пользователя сайт. </p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="images-wrapper"><img src="./images/slide2.png" alt="frame"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h3>3. Техническая реализация</h3>
+                                    <p>После утверждения дизайн-макета наступает следующий этап – верстка. Это трудоемкий процесс: программисты должны все тщательно прописать, чтобы не допустить технических ошибок.</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="images-wrapper"><img src="./images/slide3.png" alt="frame"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h3>4. Наполнение контентом </h3>
+                                    <p>Создание и публикация текстов, а также видео материала. Хороший контент и качественные фотографии привлекают больше посетителей и помогают клиенту лучше ознакомиться с ассортиментом. </p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="images-wrapper"><img src="./images/slide4.png" alt="frame"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h3>5. Тестирование </h3>
+                                    <p>Составление плана тестирования для определения ошибок. Проверка работы сайта и визуального восприятия для улучшения сайта. Также используются чек-листы для четкого определения ошибок и их устранения.</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="images-wrapper"><img src="./images/slide5.png" alt="gear"></div>
+                                </div>
+                            </div>
+                        </div>
                      
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-arrows">
+                        <span class="swiper-arrow-prev"></span>
+                        <span class="swiper-arrow-next"></span>
+                        
+                    </div>
                   </div>
             </div>
         </div>
@@ -214,12 +257,22 @@
         <div class="container">
             <h2 class="title">Обсудить проект</h2>
             <div class="discussion-form">
-                <form action="#" method="post" class="from">
-                    <p class="form-info">Расскажите о своих бизнес-целях и мы поможем вам в их достижении</p>
-                    <input class="input-name" type="text" placeholder="Имя">
-                    <input class="input-tell" type="text" placeholder="Telegram/Viber">
-                    <input class="input-email" type="email" placeholder="Email">
-                    <button class="btn">Отправить</button>
+                <form action="#" method="post" class="form">
+                    <div class="input-wrapper">
+                        <p class="form-info">Расскажите о своих бизнес-целях и мы поможем вам в их достижении</p>
+                        <input class="input-name" type="text" placeholder="Имя">
+                        <span class="input-warnnig"></span>
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <input class="input-tell" type="text" placeholder="Telegram/Viber">
+                        <span class="input-warnnig"></span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="input-email" type="email" placeholder="Email">
+                        <span class="input-warnnig"></span>
+                    </div>
+                    <button  type="submit" class="btn btn-submit">Отправить</button>
                 </form>
             </div>
         </div>
