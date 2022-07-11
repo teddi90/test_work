@@ -102,6 +102,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     navigation: {
       nextEl: ".swiper-arrow-next",
       prevEl: ".swiper-arrow-prev"
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
     }
   });
   /*=========== Smooth Skroll ===========*/

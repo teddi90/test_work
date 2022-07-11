@@ -39,43 +39,43 @@
 }
 
 
-@mixin grid($count: 12) {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 (-$default-gap);
-    }
+// @mixin grid($count: 12) {
+//     .row {
+//         display: flex;
+//         flex-wrap: wrap;
+//         margin: 0 (-$default-gap);
+//     }
 
-    [class*="col-"] {
-        padding: 0 $default-gap;
-        box-sizing: border-box;
-    }
+//     [class*="col-"] {
+//         padding: 0 $default-gap;
+//         box-sizing: border-box;
+//     }
 
-    @for $i from 1 through $count {
-        $width: math.div(100%, 12) * $i;
+//     @for $i from 1 through $count {
+//         $width: math.div(100%, 12) * $i;
 
-        .col-#{$i} {
-            max-width: $width;
-            width: 100%;
-            flex-basis: $width;
-        }
-    }
+//         .col-#{$i} {
+//             max-width: $width;
+//             width: 100%;
+//             flex-basis: $width;
+//         }
+//     }
 
-    @each $beack-point,
-    $beack-point-value in $beack-points {
-        @media screen and (max-width: $beack-point-value) {
-            @for $i from 1 through $count {
-                $width: math.div(100%, 12) * $i;
+//     @each $beack-point,
+//     $beack-point-value in $beack-points {
+//         @media screen and (max-width: $beack-point-value) {
+//             @for $i from 1 through $count {
+//                 $width: math.div(100%, 12) * $i;
 
-                .col-#{$beack-point}-#{$i} {
-                    max-width: $width;
-                    width: 100%;
-                    flex-basis: $width;
-                }
-            }
-        }
-    }
-}
+//                 .col-#{$beack-point}-#{$i} {
+//                     max-width: $width;
+//                     width: 100%;
+//                     flex-basis: $width;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @mixin media($point) {
     @media screen and (max-width: map-get($beack-points, $point)) {

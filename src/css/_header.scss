@@ -1,10 +1,33 @@
 .header {
-   padding: 261px 180px;
+   padding: 261px 0 180px;
    position: relative;
-//    overflow: hidden;
     background-image: url(../images/header_cart.svg), url(../images/header-wave.svg), url(../images/blue_ball.svg);
     background-position: right center, left 90%, 12% 24%;
     background-repeat: no-repeat, no-repeat, no-repeat;
+    @include media('lg'){
+        background-position: 450px 50%, left 90%, 12% 24%;
+    }
+    @include media('md'){
+        padding: 500px 0 80px;
+        background-image: url(../images/header_cart.svg), url(../images/mob-header.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 140px 17% ,left 15%;
+        background-size:85% ,14%;
+    }
+    @include media('sm'){
+        padding: 386px 0 51px;
+        background-image: url(../images/header_cart.svg), url(../images/mob-header.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 120px 17% ,left 15%;
+        background-size:85% ,12%;
+    }
+    @include media('xs'){
+        padding: 386px 0 51px;
+        background-image: url(../images/header_cart.svg), url(../images/mob-header.png), url(../images/purple_buble.png);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: 84px 17% ,left 15%, 90% 82%;
+        background-size:100% ,17%, 5%;
+    }
 }
 .nav {
     position: fixed;
@@ -235,11 +258,19 @@
     font-size: 50px;
     font-weight: 900;
     line-height: 1.25;
+    @include media('md'){
+        font-size: 27px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
 }
 .header-text{
     font-size: 16px;
     margin-bottom: 58px;
     @include min-media('md') {
         max-width: 382px;
+    }
+    @include media('md'){
+        margin-bottom: 34px;
     }
 }

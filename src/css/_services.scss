@@ -1,9 +1,27 @@
 .services {
     padding: 120px 0;
     background-color: $main-light-color;
-    background-image:url('../images/bag.svg');
-    background-repeat:no-repeat;
-    background-position: 95% 80%;
+    @include min-media('lg'){
+        background-image:url('../images/bag.svg');
+        background-repeat:no-repeat;
+        background-position: 95% 80%;
+    }
+    @include media('md'){
+            padding: 50px 0;
+            background-image: none;
+    }
+    @include media('sm'){
+        padding: 30px 0;
+        background-image: none;
+}
+    .title{
+        @include media('md'){
+            margin-bottom: 30px;   
+        }
+        @include media('sm'){
+            margin-bottom: 20px;   
+        }
+    }
 }
 
 .accordion {
@@ -23,8 +41,13 @@
         border-radius:50%;
         left: 44px;
         top: 15px;
-        // transform: translateY(-50%);
         transition: background-color .4s ease-in-out;
+        @include media('md'){
+            width: 15px;
+            height: 15px;
+            left: 24px;
+            top:18px;
+        }
     }  
     &::after {
         content: '';
@@ -38,6 +61,14 @@
         top: 15px;
         transform: rotate(45deg);
         transition: all .2s ease-in-out;
+    }
+    @include media('sm'){
+        font-size: 17px; 
+        padding:14px 75px 17px 57px;   
+    }
+    @include media('md'){
+        font-size: 17px; 
+        padding:14px 64px 17px 57px;   
     }
     &-item{
         margin-bottom: 10px;
@@ -74,7 +105,10 @@
             background-color: $text-color;
             position: absolute;
             left:-42px;
-            top:0px
+            top:0px;
+            @include media('md'){
+                left: -28px; 
+            }
         }
     }
 }

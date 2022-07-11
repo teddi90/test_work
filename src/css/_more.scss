@@ -1,12 +1,32 @@
 .more{
     padding: 216px 0 180px;
-    background-image: url(../images/blue_ball.svg), url(../images/Orders.svg);
+    background-image: url(../images/blue_ball.svg), url(../images/orders.svg);
     background-repeat: no-repeat no-repeat;
     background-position: 10% 23%, 80% 55%;
+    @include media('lg'){
+        background-position: 10% 23%, 500px 50%;
+    }
+    @include media('md'){
+        padding: 50px 0 50px;
+        background-image: url(../images/orders.svg);
+        background-repeat: no-repeat;
+        background-position: center 115px;
+        background-size: 250px;
+    }
+    @include media('sm'){
+        padding: 43px 0 50px;
+    }
     .title{
         text-align: left;
+        @include media('md'){
+            text-align: center;
+            margin-bottom: 238px;
+        }
     }
     p{
         margin-bottom: 45px;
+        @include media('md'){
+            font-size: 17px;
+        }
     }
 }

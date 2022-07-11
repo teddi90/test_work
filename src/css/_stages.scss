@@ -1,24 +1,62 @@
 .stages{
     padding: 123px 0 128px;
+    overflow: hidden;
+    background-image: url(../images/ball.svg), url(../images/blue_wave.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10% 11%, 78% 93%;
+    background-size:3%, 6%;
+    @include media('md'){
+        padding: 55px 0;
+        background-image: none;
+    }
+    @include media('sm'){
+        padding: 42px 0 45px;
+        background-image: url(../images/ball.svg);
+        background-repeat: no-repeat;
+        background-position: -10px 15px;
+        background-size:10%;
+    }
 }
 .stages-slider{
     position: relative;
     height: 535px;
+    @include media('md'){
+        height: unset;
+    }
     h3{
+        font-size: 21px;
         margin-bottom: 29px;
         width: 80%;
+        @include media('md'){
+            text-transform: uppercase;
+            font-size: 17px;
+            margin: 0px;
+            margin-bottom: 10px;
+
+        }
+    }
+    p{
+        @include media('lg'){
+            margin: 0;
+            margin-bottom: 56px;
+            font-size: 17px;
+        }
     }
 }
 .swiper {
-    // width: 100%;
-    // height: 100%;
     overflow: visible;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    @include media('md'){
+        position: relative;
+    }
     &-wrapper{
         margin-bottom: 80px;
+        @include media('md'){
+            margin-bottom: 25px;
+        }
     }
   }
 .swiper-slide{
@@ -27,6 +65,10 @@
     padding: 53px 17px 59px 50px;
     height: 405px;
     box-sizing: border-box;
+    @include media('md'){
+        height: unset;
+        padding: 27px 29px 31px 33px;
+    }
 }
 
 .swiper-arrows{
@@ -60,6 +102,9 @@
 }
 .swiper-arrow-prev{
     margin-right: 30px;
+    @include media('md'){
+        margin-right: 107px;
+    }
     &:after{
         top: 32%;
         left: 40%;
@@ -77,4 +122,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    @include media('md'){
+        justify-content: center;
+    }
 }

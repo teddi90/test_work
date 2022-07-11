@@ -18,7 +18,9 @@ $main-font-text:'Montserrat';
 
 $path-fonts: '../fonts/';
 
-$beack-points: ("lg": 2000px,
+$beack-points: (
+    "xl": 2500px,
+    "lg": 1400px,
     "md": 992px,
     "sm": 768px,
     "xs": 576px);

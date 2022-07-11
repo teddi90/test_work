@@ -4,6 +4,22 @@
     background-image: url(../images/pink_wave.svg), url(../images/ball.svg);
     background-position: 5% 20%,95% 80%;
     background-repeat: no-repeat no-repeat;
+    @include media('md'){
+        padding: 40px 0 40px;
+        background-image: none;
+    }
+    @include media('xs'){
+        padding: 25px 0 30px;
+        background-image: none;
+    }
+    .title{
+        @include media('sm'){
+            margin-bottom: 30px;
+        }
+        @include media('xs'){
+            margin-bottom: 15px;
+        }
+    }
 }
 .example-item {
     position: relative;
@@ -13,7 +29,13 @@
     overflow: hidden;
     transition: all .5s ease-in;
     cursor: pointer;
-    &:hover{
+    @include media('sm'){
+        margin-bottom: 30px;
+    }
+    @include media('xs'){
+        margin-bottom: 15px;
+    }
+    &:hover,&:active{
         &::after{
            opacity: 1;
         }
@@ -68,12 +90,19 @@
             margin-bottom: 0px;
             transform: translateX(-100%);
             transition: transform .4s ease-in-out;
+            @include media('md'){
+                font-size: 17px;
+                text-transform: uppercase;
+            }
         }
         p{
             color:#fff;
             margin: 0;
             transform: translateX(100%);
             transition: transform .4s ease-in-out;
+            @include media('md'){
+                font-size: 17px;
+            }
 
         }
     }
