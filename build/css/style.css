@@ -689,8 +689,13 @@ ul {
   overflow: hidden;
 }
 .panel p {
-  padding: 15px 69px 15px 0px;
   position: relative;
+}
+@media screen and (min-width: 993px) {
+  .panel p {
+    padding: 15px 69px 15px 0px;
+    line-height: 1.75;
+  }
 }
 .panel p::before {
   content: "";
@@ -762,7 +767,7 @@ ul {
   }
 }
 
-.swiper {
+.mySwiper {
   overflow: visible;
   position: absolute;
   top: 0;
@@ -770,20 +775,11 @@ ul {
   width: 100%;
 }
 @media screen and (max-width: 992px) {
-  .swiper {
+  .mySwiper {
     position: relative;
   }
 }
-.swiper-wrapper {
-  margin-bottom: 80px;
-}
-@media screen and (max-width: 992px) {
-  .swiper-wrapper {
-    margin-bottom: 25px;
-  }
-}
-
-.swiper-slide {
+.mySwiper .swiper-slide {
   border: 2px solid #67AEFC;
   border-radius: 15px;
   padding: 53px 17px 59px 50px;
@@ -791,9 +787,18 @@ ul {
   box-sizing: border-box;
 }
 @media screen and (max-width: 992px) {
-  .swiper-slide {
+  .mySwiper .swiper-slide {
     height: unset;
     padding: 27px 29px 31px 33px;
+  }
+}
+
+.swiper-wrapper {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 992px) {
+  .swiper-wrapper {
+    margin-bottom: 25px;
   }
 }
 
@@ -950,6 +955,7 @@ ul {
   z-index: 4;
   visibility: hidden;
   text-align: center;
+  width: 100%;
 }
 .example-item__info h3 {
   color: #fff;
@@ -974,6 +980,18 @@ ul {
 @media screen and (max-width: 992px) {
   .example-item__info p {
     font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .examples-slider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mob-non {
+    display: none;
   }
 }
 

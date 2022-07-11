@@ -95,7 +95,11 @@
     overflow: hidden;
    
     p{
-        padding: 15px 69px 15px 0px;
+        @include min-media('md'){
+            padding: 15px 69px 15px 0px;
+            line-height: 1.75;
+        }
+        
         position: relative;
         &::before{
             content:'';

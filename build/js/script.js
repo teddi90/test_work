@@ -114,6 +114,22 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     }
   });
+  /*=========== Swipe slider2 ===========*/
+
+  var swiperExample = new Swiper(".mySwiper2", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-arrow-next",
+      prevEl: ".swiper-arrow-prev"
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      }
+    }
+  });
   /*=========== Smooth Skroll ===========*/
 
   var anchors = document.querySelectorAll('a[href^="#"]');

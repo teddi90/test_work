@@ -43,7 +43,7 @@
         }
     }
 }
-.swiper {
+.mySwiper {
     overflow: visible;
     position: absolute;
     top: 0;
@@ -52,24 +52,26 @@
     @include media('md'){
         position: relative;
     }
-    &-wrapper{
-        margin-bottom: 80px;
+    .swiper-slide{
+        border:2px solid $main-color;
+        border-radius: 15px;
+        padding: 53px 17px 59px 50px;
+        height: 405px;
+        box-sizing: border-box;
         @include media('md'){
-            margin-bottom: 25px;
+            height: unset;
+            padding: 27px 29px 31px 33px;
         }
     }
+    
   }
-.swiper-slide{
-    border:2px solid $main-color;
-    border-radius: 15px;
-    padding: 53px 17px 59px 50px;
-    height: 405px;
-    box-sizing: border-box;
+  .swiper-wrapper{
+    margin-bottom: 80px;
     @include media('md'){
-        height: unset;
-        padding: 27px 29px 31px 33px;
+        margin-bottom: 25px;
     }
 }
+
 
 .swiper-arrows{
     text-align: center;

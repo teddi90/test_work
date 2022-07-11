@@ -44,6 +44,21 @@
             },
         },
     });
+    /*=========== Swipe slider2 ===========*/
+    const swiperExample = new Swiper(".mySwiper2", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-arrow-next",
+            prevEl: ".swiper-arrow-prev",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+        },
+    });
 
     /*=========== Smooth Skroll ===========*/
     const anchors = document.querySelectorAll('a[href^="#"]')

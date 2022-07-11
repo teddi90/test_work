@@ -83,6 +83,7 @@
         z-index:4;
         visibility: hidden;
         text-align: center;
+        width: 100%;
         h3{
             color:#fff;
             font-size: 21px;
@@ -105,5 +106,15 @@
             }
 
         }
+    }
+}
+.examples-slider{
+    @include min-media('xs'){
+        display: none;
+    }
+}
+.mob-non{
+    @include media('xs'){
+        display: none;
     }
 }
