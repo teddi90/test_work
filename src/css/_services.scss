@@ -1,6 +1,7 @@
 .services {
     padding: 120px 0;
     background-color: $main-light-color;
+    scroll-margin-top:30px;
     @include min-media('lg'){
         background-image:url('../images/bag.svg');
         background-repeat:no-repeat;
